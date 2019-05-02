@@ -1,25 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css'
-import earth from './earth.jpg'
+import React from "react";
+import earth from "./earth.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={earth} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="paperContainer">
+      <h1>Hello World!</h1>
     </div>
   );
 }
