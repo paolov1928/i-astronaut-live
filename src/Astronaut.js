@@ -1,19 +1,19 @@
-import React, { Component } from "react"
-import astronaut from "./astronaut.png"
+import React, { Component } from "react";
+import astronaut from "./astronaut.png";
 
 class Astronaut extends Component {
-  state = {}
+  state = {};
   render() {
-    const { name, handleClick } = this.props
+    const { name, handleClick } = this.props;
     return (
       <img
-        className="astronauts"
+        className="astronaut"
         src={astronaut}
         alt="astronaut"
         onClick={() => handleClick(name)}
       />
-    )
+    );
   }
 }
 
-export default Astronaut
+export default Astronaut;

@@ -13,8 +13,9 @@ code {
     monospace;
 }
 
-.astronauts {
+.astronaut {
   max-height: 100px;
+  animation: astronaut-spin infinite 20s linear;
 }
 
 .astronaut-container {
@@ -41,4 +42,13 @@ code {
 
 h1 {
   color: white;
+}
+
+@keyframes astronaut-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
