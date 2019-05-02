@@ -15,8 +15,9 @@ code {
 
 .paperContainer {
   background-image: url("./earth.jpg");
+  background-color: black;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
