@@ -17,7 +17,7 @@ code {
   max-height: 100px;
 }
 
-.paperContainer {
+.App {
   background-image: url("./earth.jpg");
   background-color: black;
   height: 100vh;

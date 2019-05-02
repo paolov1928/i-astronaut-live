@@ -3,7 +3,7 @@ import AstronautContainer from "./AstronautContainer"
 
 function App() {
   return (
-    <div className="paperContainer">
+    <div className="App">
       <h1>Welcome to Kenan and Paolo's iAstronautLive!</h1>
       <AstronautContainer />
     </div>

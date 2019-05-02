@@ -1,35 +1,49 @@
-import React, { Component, Fragment } from "react";
-import astronaut from "./astronaut.png";
+import React, { Component, Fragment } from "react"
+import astronaut from "./astronaut.png"
 
 class AstronautContainer extends Component {
-  state = { peopleInSpace: null };
+  state = { peopleInSpace: null, selectedAstronaut: null }
 
   componentDidMount() {
     fetch("http://api.open-notify.org/astros.json")
       .then(r => r.json())
-      .then(data => this.setState({ peopleInSpace: data.people }));
+      .then(data => this.setState({ peopleInSpace: data.people }))
+  }
+
+  handleClick = name => {
+    this.setState({ selectedAstronaut: name })
   }
 
   renderAstronauts = () => {
-    // For each astronaut in state.peopleInSpace
-    // render an img of astronaut
     return this.state.peopleInSpace.map(person => {
-      return <img className="astronauts" src={astronaut} alt="astronaut" />;
-    });
-  };
+      return this.state.selectedAstronaut === person.name ? (
+        <Fragment>
+          <img
+            className="astronauts"
+            src={astronaut}
+            alt="astronaut"
+            onClick={() => this.handleClick(person.name)}
+          />
+          <h1>{person.name}</h1>{" "}
+        </Fragment>
+      ) : (
+        <img
+          className="astronauts"
+          src={astronaut}
+          alt="astronaut"
+          onClick={() => this.handleClick(person.name)}
+        />
+      )
+    })
+  }
 
   render() {
     return (
       <Fragment>
-        <h1>Astronauts Here</h1>
-        {this.state.peopleInSpace ? (
-          this.renderAstronauts()
-        ) : (
-          <h1>NO ONE HERE</h1>
-        )}
+        {this.state.peopleInSpace ? this.renderAstronauts() : null}
       </Fragment>
-    );
+    )
   }
 }
 
-export default AstronautContainer;
+export default AstronautContainer
