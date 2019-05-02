@@ -1,3 +1,7 @@
+This app is using this api:
+
+- http://api.open-notify.org/astros.json - people who are in space
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
