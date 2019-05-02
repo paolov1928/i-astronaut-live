@@ -24,7 +24,7 @@ class AstronautContainer extends Component {
             alt="astronaut"
             onClick={() => this.handleClick(person.name)}
           />
-          <h1>{person.name}</h1>{" "}
+          <h1>{person.name}</h1>
         </Fragment>
       ) : (
         <img
