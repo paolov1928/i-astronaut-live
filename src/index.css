@@ -23,6 +23,13 @@ code {
   justify-content: space-evenly;
 }
 
+.iss-location {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin-right: 1%;
+}
+
 .App {
   background-image: url("./earth.jpg");
   background-color: black;
