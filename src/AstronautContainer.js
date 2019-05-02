@@ -1,18 +1,18 @@
-import React, { Component, Fragment } from "react"
-import astronaut from "./astronaut.png"
+import React, { Component, Fragment } from "react";
+import astronaut from "./astronaut.png";
 
 class AstronautContainer extends Component {
-  state = { peopleInSpace: null, selectedAstronaut: null }
+  state = { peopleInSpace: null, selectedAstronaut: null };
 
   componentDidMount() {
     fetch("http://api.open-notify.org/astros.json")
       .then(r => r.json())
-      .then(data => this.setState({ peopleInSpace: data.people }))
+      .then(data => this.setState({ peopleInSpace: data.people }));
   }
 
   handleClick = name => {
-    this.setState({ selectedAstronaut: name })
-  }
+    this.setState({ selectedAstronaut: name });
+  };
 
   renderAstronauts = () => {
     return this.state.peopleInSpace.map(person => {
@@ -33,17 +33,17 @@ class AstronautContainer extends Component {
           alt="astronaut"
           onClick={() => this.handleClick(person.name)}
         />
-      )
-    })
-  }
+      );
+    });
+  };
 
   render() {
     return (
-      <Fragment>
+      <div className="astronaut-container">
         {this.state.peopleInSpace ? this.renderAstronauts() : null}
-      </Fragment>
-    )
+      </div>
+    );
   }
 }
 
-export default AstronautContainer
+export default AstronautContainer;

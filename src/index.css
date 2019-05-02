@@ -17,6 +17,12 @@ code {
   max-height: 100px;
 }
 
+.astronaut-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .App {
   background-image: url("./earth.jpg");
   background-color: black;
