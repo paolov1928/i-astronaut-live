@@ -1,6 +1,13 @@
-This app is using this api:
+Written by Paolo Ventura & Kenan Berker during a fun pairing session on 02/05.
 
-- http://api.open-notify.org/astros.json - people who are in space
+This app is using the following api:
+
+- http://api.open-notify.org/astros.json - people who are currently in space
+
+This project uses React, vanilla Javascript, HTML and CSS among others.
+
+Please do fork if you see any improvements. We really enjoyed making it!
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
